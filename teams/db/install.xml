@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/teams/db" VERSION="20220209" COMMENT="XMLDB file for Moodle mod/teams"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="teams" COMMENT="teams meetings">
+      <FIELDS>
+        <FIELD NAME="id"                           TYPE="int"       NOTNULL="true"    SEQUENCE="true"   LENGTH="10"/>
+        <FIELD NAME="course"                       TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="name"                         TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="intro"                        TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="introformat"                  TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="display"                      TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="displayoptions"               TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="subjectof"                    TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="grade"                        TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="meeting_id"                   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="start_url"                    TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="join_url"                     TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="created_at"                   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="host_id"                      TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="timemodified"                 TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="recurring"                    TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="recurrence_type"              TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="repeat_interval"              TYPE="int"       NOTNULL="false"   SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="weekly_days"                  TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="monthly_day"                  TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="monthly_week"                 TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="monthly_week_day"             TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="monthly_repeat_option"        TYPE="int"       NOTNULL="false"   SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="yearly_monthly_repeat_option" TYPE="int"       NOTNULL="false"   SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="yearly_month"                 TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="yearly_monthly_day"           TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="yearly_monthly_week"          TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="yearly_monthly_week_day"      TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="yearly_monthly"               TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="end_date_time"                TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="end_date_option"              TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="webinar"                      TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="duration"                     TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="timezone"                     TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="password"                     TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_jbh"                   TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="option_start_type"            TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_host_video"            TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="option_participants_video"    TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="option_audio"                 TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_mute_upon_entry"       TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_waiting_room"          TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_authenticated_users"   TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="option_encryption_type"       TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="exists_on_teams"              TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="alternative_hosts"            TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="recordings_visible_default"   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="show_schedule"                TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="show_security"                TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="show_media"                   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="option_auto_recording"        TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="registration"                 TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="start_datetime"               TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="end_datetime"                 TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="location"                     TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="attendees_email"              TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="attendees_name"               TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="prefer"                       TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="hideattendees"                TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="importance"                   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="isallday"                     TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="isonlinemeeting"              TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="isreminderon"                 TYPE="int"       NOTNULL="true"    DEFAULT="0" SEQUENCE="false" LENGTH="10"/>
+        <FIELD NAME="reminderminutesbeforestart"   TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="sensitivity"                  TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="occurrences"                  TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_sunday"           TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_monday"           TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_tuesday"          TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_wednesday"        TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_thursday"         TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_friday"           TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+        <FIELD NAME="weekly_days_saturday"         TYPE="text"      NOTNULL="false"   SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
